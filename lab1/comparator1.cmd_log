@@ -1,0 +1,5 @@
+xst -ise "D:/work/Projects/labs-vhdl/lab1/lab1.ise" -intstyle ise -ifn "D:/work/Projects/labs-vhdl/lab1/comparator1.xst" -ofn "D:/work/Projects/labs-vhdl/lab1/comparator1.syr"
+ngdbuild -ise "D:/work/Projects/labs-vhdl/lab1/lab1.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s200-pq208-5 "comparator1.ngc" comparator1.ngd
+map -ise "D:/work/Projects/labs-vhdl/lab1/lab1.ise" -intstyle ise -p xc2s200-pq208-5 -cm area -pr off -k 4 -c 100 -tx off -o comparator1_map.ncd comparator1.ngd comparator1.pcf
+par -ise "D:/work/Projects/labs-vhdl/lab1/lab1.ise" -w -intstyle ise -ol std -t 1 comparator1_map.ncd comparator1.ncd comparator1.pcf
+trce -ise "D:/work/Projects/labs-vhdl/lab1/lab1.ise" -intstyle ise -v 3 -s 5 -xml comparator1 comparator1.ncd -o comparator1.twr comparator1.pcf

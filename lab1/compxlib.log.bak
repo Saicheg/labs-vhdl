@@ -1,0 +1,35 @@
+    ____  ____
+   /   /\/   /
+  /___/  \  /    VENDOR      : Xilinx Inc.
+  \   \   \/     VERSION     : 10.1.03 (K.39)
+   \   \         APPLICATION : compxlib
+   /   /         CONTENTS    : Compilation Log
+  /___/   /\     FILENAME    : compxlib.log
+  \   \  /  \    CREATED ON  : Mon Sep 23 20:55:42 2013
+   \___\/\___\
+
+Library Source => 'D:\work\soft\Xilinx\10.1\ISE'
+Compilation Mode = FAST
+Scheduling library compilation for SPARTAN-II 
+
+Signature:-
+------------------------------------------------------------------------------
+compxlib -s mti_pe
+         -arch spartan2
+         -lib unisim
+         -lib unimacro
+         -lib simprim
+         -lib xilinxcorelib
+         -l all
+         -dir D:\work\soft\Xilinx\10.1\ISE
+         -log compxlib.log
+         -w
+         -p D:/work/soft/Modeltech_pe_edu_10.2c
+------------------------------------------------------------------------------
+ERROR:CAEInterfaces:420 - COMPXLIB[env]: unable to find simulator (mti_pe) executables
+
+<ToolTip>: Specify the simulator executable path in the "Simulator Path"
+           property under "Compile HDL Simulation Libraries" properties.
+
+           IMPORTANT: Make sure that the license file/other environment
+           variable for mti_pe are properly set

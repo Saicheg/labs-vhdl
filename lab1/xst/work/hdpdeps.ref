@@ -1,0 +1,7 @@
+V3 3
+FL D:/work/Projects/labs-vhdl/lab1/comparator1.vhd 2013/09/24.18:27:44 K.39
+EN work/comparator1 1380037445 FL D:/work/Projects/labs-vhdl/lab1/comparator1.vhd \
+      PB ieee/std_logic_1164 1217055545 PB ieee/std_logic_arith 1217055546 \
+      PB ieee/STD_LOGIC_UNSIGNED 1217055547
+AR work/comparator1/Behavioral 1380037446 \
+      FL D:/work/Projects/labs-vhdl/lab1/comparator1.vhd EN work/comparator1 1380037445

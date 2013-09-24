@@ -1,0 +1,59 @@
+--------------------------------------------------------------------------------
+Release 10.1.03 Trace  (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+D:\work\soft\Xilinx\10.1\ISE\bin\nt\unwrapped\trce.exe -ise
+D:/work/Projects/labs-vhdl/lab1/lab1.ise -intstyle ise -v 3 -s 5 -xml
+comparator1 comparator1.ncd -o comparator1.twr comparator1.pcf
+
+Design file:              comparator1.ncd
+Physical constraint file: comparator1.pcf
+Device,package,speed:     xc2s200,pq208,-5 (PRODUCTION 1.27 2008-01-09)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+a<0>           |aeqb           |   10.477|
+a<1>           |aeqb           |   10.869|
+a<2>           |aeqb           |   10.274|
+a<3>           |aeqb           |   10.365|
+b<0>           |aeqb           |   11.310|
+b<1>           |aeqb           |   10.830|
+b<2>           |aeqb           |    9.857|
+b<3>           |aeqb           |    9.951|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Sep 24 18:44:24 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 102 MB
+
+
+
