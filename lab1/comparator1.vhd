@@ -35,12 +35,18 @@ end comparator1;
 
 architecture Behavioral of comparator1 is
 begin
-  aeqb <= not((a(0) xor b(0)) or
-              (a(1) xor b(1)) or
-				  (a(2) xor b(2)) or
-				  (a(3) xor b(3)));
---  agtb <= '1';
---  altb <= b(0);
+  aeqb <= not(( a(0) xor b(0) ) or
+              ( a(1) xor b(1) ) or
+				  ( a(2) xor b(2) ) or
+				  ( a(3) xor b(3) ));
+  agtb <= (a(3) and not b(3)) or
+			 (not (a(3) xor b(3)) and a(2) and not b(2)) or
+			 (not (a(3) xor b(3)) and not (a(2) xor b(2)) and a(1) and not b(1)) or
+			 (not (a(3) xor b(3)) and not (a(2) xor b(2)) and not (a(1) xor b(1)) and a(0) and not b(0));
+  altb <= (b(3) and not a(3)) or
+			 (not (b(3) xor a(3)) and b(2) and not a(2)) or
+			 (not (b(3) xor a(3)) and not (b(2) xor a(2)) and b(1) and not a(1)) or
+			 (not (b(3) xor a(3)) and not (b(2) xor a(2)) and not (b(1) xor a(1)) and b(0) and not a(0));
 
 end Behavioral;
 

@@ -1,5 +1,5 @@
-set -tmpdir "D:/work/Projects/labs-vhdl/lab1/xst/projnav.tmp"
-set -xsthdpdir "D:/work/Projects/labs-vhdl/lab1/xst"
+set -tmpdir "D:/work/Projects/labs_vhdl/lab1/xst/projnav.tmp"
+set -xsthdpdir "D:/work/Projects/labs_vhdl/lab1/xst"
 run
 -ifn comparator1.prj
 -ifmt mixed
