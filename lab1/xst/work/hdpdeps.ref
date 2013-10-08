@@ -1,4 +1,4 @@
-V3 9
+V3 15
 FL D:/work/Projects/labs_vhdl/lab1/comparator1.vhd 2013/09/24.20:17:19 K.39
 EN work/comparator1 1380043048 FL D:/work/Projects/labs_vhdl/lab1/comparator1.vhd \
       PB ieee/std_logic_1164 1217055545 PB ieee/std_logic_arith 1217055546 \
@@ -17,3 +17,15 @@ EN work/comparator3 1381237588 FL D:/work/Projects/labs_vhdl/lab1/comparator3.vh
       PB ieee/STD_LOGIC_UNSIGNED 1217055547
 AR work/comparator3/Behavioral 1381237589 \
       FL D:/work/Projects/labs_vhdl/lab1/comparator3.vhd EN work/comparator3 1381237588
+FL D:/work/Projects/labs_vhdl/lab1/comparator4.vhd 2013/10/08.16:28:31 K.39
+EN work/comparator4 1381238915 FL D:/work/Projects/labs_vhdl/lab1/comparator4.vhd \
+      PB ieee/std_logic_1164 1217055545 PB ieee/std_logic_arith 1217055546 \
+      PB ieee/STD_LOGIC_UNSIGNED 1217055547
+AR work/comparator4/Behavioral 1381238916 \
+      FL D:/work/Projects/labs_vhdl/lab1/comparator4.vhd EN work/comparator4 1381238915
+FL D:/work/Projects/labs_vhdl/lab1/comparator5.vhd 2013/10/08.16:49:06 K.39
+EN work/comparator5 1381240151 FL D:/work/Projects/labs_vhdl/lab1/comparator5.vhd \
+      PB ieee/std_logic_1164 1217055545 PB ieee/std_logic_arith 1217055546 \
+      PB ieee/STD_LOGIC_UNSIGNED 1217055547
+AR work/comparator5/Behavioral 1381240152 \
+      FL D:/work/Projects/labs_vhdl/lab1/comparator5.vhd EN work/comparator5 1381240151

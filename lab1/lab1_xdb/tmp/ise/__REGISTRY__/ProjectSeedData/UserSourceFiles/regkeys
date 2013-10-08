@@ -1,8 +1,11 @@
 NUM_USER_FILES
-6
+10
 s
 user_file_1
 comparator1.vhd
+s
+user_file_10
+comparator5_spec.tbw
 s
 user_file_2
 comparator1_spec.tbw
@@ -18,4 +21,13 @@ comparator3.vhd
 s
 user_file_6
 comparator3_spec.tbw
+s
+user_file_7
+comparator4.vhd
+s
+user_file_8
+comparator4_spec.tbw
+s
+user_file_9
+comparator5.vhd
 s

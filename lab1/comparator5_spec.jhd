@@ -1,0 +1,3 @@
+MODULE comparator5_spec
+SUBMODULE comparator5
+INSTANCE UUT
