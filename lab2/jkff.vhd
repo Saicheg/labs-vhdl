@@ -49,6 +49,8 @@ begin
             t <= '0';
          elsif J = '1' and K = '1' then
             t <= not t;
+         elsif J = '0' and K = '0' then
+            t <= t;
          end if;
       end if;
    end process;
