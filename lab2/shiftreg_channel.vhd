@@ -51,6 +51,6 @@ begin
    dff_in <= sr_one or sl_one or load_one or hold_one;
    trigger : dff port map (CLK, dff_in, dff_out);
    D <= dff_out;
-   Q <= dff_out when GATE = '1';
+   Q <= dff_out when GATE = '1' else 'Z';
 end Behavioral;
 
