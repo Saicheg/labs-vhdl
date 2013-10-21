@@ -1,0 +1,3 @@
+MODULE jkff_spec
+SUBMODULE jkff
+INSTANCE UUT
