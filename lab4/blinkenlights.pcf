@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map K.39 on Tue Nov 19 18:54:35 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "invCLR" LOCATE = SITE "T7" LEVEL 1;
+COMP "clk" LOCATE = SITE "R8" LEVEL 1;
+COMP "sbit" LOCATE = SITE "T5" LEVEL 1;
+COMP "invOE" LOCATE = SITE "T6" LEVEL 1;
+COMP "lights<0>" LOCATE = SITE "N6" LEVEL 1;
+COMP "lights<1>" LOCATE = SITE "P5" LEVEL 1;
+COMP "lights<2>" LOCATE = SITE "J15" LEVEL 1;
+COMP "lights<3>" LOCATE = SITE "H16" LEVEL 1;
+COMP "lights<4>" LOCATE = SITE "C15" LEVEL 1;
+COMP "lights<5>" LOCATE = SITE "E15" LEVEL 1;
+COMP "data_in<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "data_in<1>" LOCATE = SITE "T9" LEVEL 1;
+COMP "data_in<2>" LOCATE = SITE "T8" LEVEL 1;
+COMP "s0" LOCATE = SITE "C13" LEVEL 1;
+COMP "s1" LOCATE = SITE "B13" LEVEL 1;
+SCHEMATIC END;
+

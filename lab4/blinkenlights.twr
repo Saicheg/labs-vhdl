@@ -1,0 +1,81 @@
+--------------------------------------------------------------------------------
+Release 10.1.03 Trace  (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+D:\work\soft\Xilinx\10.1\ISE\bin\nt\unwrapped\trce.exe -ise
+D:/work/Projects/labs_vhdl/lab4/lab4.ise -intstyle ise -v 3 -s 5 -xml
+blinkenlights blinkenlights.ncd -o blinkenlights.twr blinkenlights.pcf -ucf
+blinkenlights.ucf
+
+Design file:              blinkenlights.ncd
+Physical constraint file: blinkenlights.pcf
+Device,package,speed:     xc2s200,fg256,-5 (PRODUCTION 1.27 2008-01-09)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.645|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+data_in<0>     |lights<0>      |   12.252|
+data_in<1>     |lights<1>      |   11.893|
+data_in<2>     |lights<2>      |   13.756|
+invOE          |lights<0>      |   15.091|
+invOE          |lights<1>      |   14.870|
+invOE          |lights<2>      |   15.124|
+invOE          |lights<3>      |   14.657|
+invOE          |lights<4>      |   15.142|
+invOE          |lights<5>      |   15.467|
+s0             |lights<0>      |   18.175|
+s0             |lights<1>      |   18.193|
+s0             |lights<2>      |   17.166|
+s0             |lights<3>      |   14.597|
+s0             |lights<4>      |   14.788|
+s0             |lights<5>      |   16.026|
+s1             |lights<0>      |   18.189|
+s1             |lights<1>      |   18.207|
+s1             |lights<2>      |   17.180|
+s1             |lights<3>      |   14.481|
+s1             |lights<4>      |   15.332|
+s1             |lights<5>      |   15.594|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Nov 19 18:54:41 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 103 MB
+
+
+

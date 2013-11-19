@@ -1,0 +1,6 @@
+CommandLine
+D:\work\soft\Xilinx\10.1\ISE\bin\nt\unwrapped\xst.exe -ise D:/work/Projects/labs_vhdl/lab4_reborn/lab4_reborn.ise -intstyle ise -ifn D:/work/Projects/labs_vhdl/lab4_reborn/blinkenlights.xst -ofn D:/work/Projects/labs_vhdl/lab4_reborn/blinkenlights.syr -finalclean 1
+s
+FormatString
+xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]
+s
