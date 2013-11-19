@@ -15,22 +15,19 @@ architecture Behavioral of frekvensdeler is
    signal clock_signal: std_logic;
 begin
    update_counter: process(clk)
-      variable initialized : boolean := false;
       variable count : natural range 0 to ratio-1 := 0;
    begin
-      if clk'event and clk = '1' then
-         if not initialized then
-            initialized := true;
-            clock_signal <= '0';
-         end if;
-         
-         if count=ratio/2-1 then      -- toggle at half period
-            clock_signal <= not clock_signal;
-            count := count + 1;
-         elsif count=ratio-1 then     -- toggle at end 
-            clock_signal <= not clock_signal;
+      if ratio = 0 or ratio = 1 then
+         clock_signal <= clk;
+      elsif clk'event and clk = '1' then
+         if count = ratio - 1 then
             count := 0;
          else
+            if count = 0 then
+               clock_signal <= '1';
+            elsif count = ratio/2 then
+               clock_signal <= '0';
+            end if;
             count := count + 1;
          end if;
       end if;

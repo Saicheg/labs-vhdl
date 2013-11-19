@@ -841,6 +841,7 @@ proc restore { { project_dir "" } } {
       "../lab2/shiftreg_channel.vhd" 
       "blinkenlights.ucf" 
       "blinkenlights.vhd" 
+      "blinkenlights_spec.vhd" 
       "frekvensdeler.vhd" 
       "frekvensdeler_spec.vhd" 
       "shiftreg.vhd" 
@@ -862,7 +863,7 @@ proc restore { { project_dir "" } } {
 
   set process_props { 
       "A" "" "" "" "PROP_AutoGenFile" "false" 
-      "A" "" "" "" "PROP_BehavioralSimTop" "Architecture|frekvensdeler_spec|behavior" 
+      "A" "" "" "" "PROP_BehavioralSimTop" "Architecture|blinkenlights_spec|behavior" 
       "A" "" "" "" "PROP_CPLDFitkeepio" "false" 
       "A" "" "" "" "PROP_CompxlibAbelLib" "true" 
       "A" "" "" "" "PROP_CompxlibCPLDDetLib" "true" 
@@ -1110,7 +1111,7 @@ proc restore { { project_dir "" } } {
       "B" "" "" "" "PROP_ModelSimProcWin" "false" 
       "B" "" "" "" "PROP_ModelSimSignalWin" "true" 
       "B" "" "" "" "PROP_ModelSimSimRes" "Default (1 ps)" 
-      "B" "" "" "" "PROP_ModelSimSimRunTime_tb" "1000ns" 
+      "B" "" "" "" "PROP_ModelSimSimRunTime_tb" "10us" 
       "B" "" "" "" "PROP_ModelSimSimRunTime_tbw" "1000ns" 
       "B" "" "" "" "PROP_ModelSimSourceWin" "false" 
       "B" "" "" "" "PROP_ModelSimStructWin" "true" 

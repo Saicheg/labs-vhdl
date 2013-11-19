@@ -1,18 +1,15 @@
-# Синхросигнал 50Мгц от внешнего генератора
-net clk loc = r8;
-# Светодиодные индикаторы
-net lights<0> loc = n6;
-net lights<1> loc = p5;
-net lights<2> loc = j15;
-net lights<3> loc = h16;
-net lights<4> loc = c15;
-net lights<5> loc = e15;
-# Переключатели
-net switches<0> loc = t10;
-net switches<1> loc = t9;
-net switches<2> loc = t8;
-net switches<3> loc = t7;
-net switches<4> loc = t6;
-net switches<5> loc = t5;
-net switches<6> loc = c13;
-net switches<7> loc = b13;
+NET "clk"  LOC = "r8"  ; 
+NET "data_in<0>"  LOC = "t10"  ;
+NET "data_in<1>"  LOC = "t9"  ;
+NET "data_in<2>"  LOC = "t8"  ;
+NET "invCLR"  LOC = "t7"  ;
+NET "invOE"  LOC = "t6"  ;
+NET "lights<0>"  LOC = "n6"  ; 
+NET "lights<1>"  LOC = "p5"  ; 
+NET "lights<2>"  LOC = "j15"  ; 
+NET "lights<3>"  LOC = "h16"  ; 
+NET "lights<4>"  LOC = "c15"  ; 
+NET "lights<5>"  LOC = "e15"  ; 
+NET "s0"  LOC = "c13"  ;
+NET "s1"  LOC = "b13"  ;
+NET "sbit"  LOC = "t5"  ;

@@ -1,8 +1,11 @@
 NUM_USER_FILES
-9
+10
 s
 user_file_1
 shiftreg_spec.vhd
+s
+user_file_10
+blinkenlights_spec.vhd
 s
 user_file_2
 shiftreg.vhd

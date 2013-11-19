@@ -28,17 +28,19 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --use UNISIM.VComponents.all;
 
 entity blinkenlights is 
-   generic (divider_ratio: natural := 4);
+   generic (divider_ratio: natural := 1);
    port (
-   clk      : in  std_logic;
-   switches : in  std_logic_vector (7 downto 0);
-   lights   : out std_logic_vector (5 downto 0));
+      clk      : in  std_logic;
+      s0, s1, sbit : in std_logic;
+      invOE, invCLR : in std_logic;
+      data_in : in std_logic_vector(2 downto 0);
+      lights   : out std_logic_vector (5 downto 0));
    
 end blinkenlights;
 
 architecture Behavioral of blinkenlights is
    component shiftreg is port (
-      CLK, S0, S1, invOE1, invOE2, invCLR : in  std_logic;
+      CLK, S0, S1, SR, SL, invOE1, invOE2, invCLR : in  std_logic;
       Q : inout  std_logic_vector (7 downto 0));
    end component;
    
@@ -49,46 +51,24 @@ architecture Behavioral of blinkenlights is
       output : out std_logic);
    end component;
    
-   signal clk_internal, clk_reg: std_logic;
-   signal reg_mode : std_logic;
+   signal clk_internal: std_logic;
    signal data : std_logic_vector (7 downto 0);
 begin
    divider_internal : frekvensdeler 
-      generic map (ratio => divider_ratio / 2)
+      generic map (ratio => divider_ratio)
       port map (clk => clk,
                 output => clk_internal);
    
    reg : shiftreg 
       port map (
-         CLK => clk_reg,
-         S0 => reg_mode, S1 => reg_mode,
-         invOE1 => '0', invOE2 => '0',
-         invCLR => '1',
+         CLK => clk_internal,
+         S0 => s0, S1 => s1,
+         SR => sbit, SL => sbit,
+         invOE1 => invOE, invOE2 => invOE,
+         invCLR => invCLR,
          Q => data);
          
-   process (clk_internal)
-      variable reading : boolean;
-      variable clock_change : boolean;
-      variable clock_next : std_logic := '1';
-   begin
-      if clk_internal'event and clk_internal = '1' then
-         if clock_change then
-            clk_reg <= clock_next;
-         else
-            reg_mode <= not clk_reg;
-            clock_next := not clk_reg;
-         end if;
-         clock_change := not clock_change;
-      end if;
-   end process;
-   
-   process (clk_reg)
-   begin
-      if clk_reg'event and clk_reg = '0' then
-         lights(5 downto 0) <= data(5 downto 0);
-      end if;
-   end process;
-   
-   data(7 downto 0) <= switches(7 downto 0) when (reg_mode = '1') else (others => 'Z');
+   data <= "00000" & data_in when s0 = '1' and s1 = '1' else (others => 'Z');
+   lights <= data(7 downto 5) & data(2 downto 0) when invOE = '0' else (others => 'Z');
 end Behavioral;
 

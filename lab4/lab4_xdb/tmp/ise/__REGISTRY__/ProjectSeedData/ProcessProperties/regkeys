@@ -1091,7 +1091,7 @@ prop_264_name
 PROP_ModelSimSimRunTime_tb
 s
 prop_264_val
-"1000ns"
+"10us"
 s
 prop_265_name
 PROP_ModelSimUutInstName_postMap
@@ -1967,7 +1967,7 @@ prop_6_name
 PROP_BehavioralSimTop
 s
 prop_6_val
-"Architecture|frekvensdeler_spec|behavior"
+"Architecture|blinkenlights_spec|behavior"
 s
 prop_70_name
 PROP_XPowerOptVerboseRpt
