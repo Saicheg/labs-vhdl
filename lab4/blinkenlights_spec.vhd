@@ -15,6 +15,7 @@ ARCHITECTURE behavior OF blinkenlights_spec IS
     -- Component Declaration for the Unit Under Test (UUT)
  
     COMPONENT blinkenlights
+    generic (divider_ratio: natural := 2);
     PORT(
          clk : IN  std_logic;
          s0 : IN  std_logic;
@@ -46,7 +47,9 @@ ARCHITECTURE behavior OF blinkenlights_spec IS
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: blinkenlights PORT MAP (
+   uut: blinkenlights
+   generic map (divider_ratio => 2)
+   PORT MAP (
           clk => clk,
           s0 => s0,
           s1 => s1,
@@ -73,7 +76,8 @@ BEGIN
 			read(bufferLine, outLine);
          
          CLK <= '0';
-         data_in <= inLine(7 downto 5);
+         wait for 5 ns;
+         data_in(2 downto 0) <= inLine(7 downto 5);
          s0 <= inLine(4);
          s1 <= inLine(3);
          sbit <= inLine(2);

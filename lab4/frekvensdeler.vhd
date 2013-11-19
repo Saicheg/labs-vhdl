@@ -20,14 +20,14 @@ begin
       if ratio = 0 or ratio = 1 then
          clock_signal <= clk;
       elsif clk'event and clk = '1' then
+         if count = 0 then
+            clock_signal <= '1';
+         elsif count = ratio/2 then
+            clock_signal <= '0';
+         end if;
          if count = ratio - 1 then
             count := 0;
          else
-            if count = 0 then
-               clock_signal <= '1';
-            elsif count = ratio/2 then
-               clock_signal <= '0';
-            end if;
             count := count + 1;
          end if;
       end if;
