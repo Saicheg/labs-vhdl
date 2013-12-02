@@ -15,7 +15,6 @@ ARCHITECTURE behavior OF blinkenlights_spec IS
     -- Component Declaration for the Unit Under Test (UUT)
  
     COMPONENT blinkenlights
-    generic (divider_ratio: natural := 2);
     PORT(
          clk : IN  std_logic;
          s0 : IN  std_logic;
@@ -42,13 +41,15 @@ ARCHITECTURE behavior OF blinkenlights_spec IS
    signal lights : std_logic_vector(5 downto 0);
 
    -- Clock period definitions
-   constant clock_period : time := 200ns;
+   constant half_clock_period : time := 10ns;
+   constant divider : integer := 100;
+   
+   signal counter : integer;
  
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
    uut: blinkenlights
-   generic map (divider_ratio => 2)
    PORT MAP (
           clk => clk,
           s0 => s0,
@@ -67,8 +68,11 @@ BEGIN
 	   variable inLine : std_logic_vector (7 downto 0);
 	   variable outLine: std_logic_vector (6 downto 0);
       variable check_response : std_logic;
+      variable i : integer range 0 to divider;
+      variable initialized : boolean := false;
    begin
       wait for 100 ns;
+      CLK <= '0';
 		while not endfile(testFile)
 	  	loop
 			readline(testFile, bufferLine);
@@ -76,8 +80,16 @@ BEGIN
          readline(testFile, bufferLine);
 			read(bufferLine, outLine);
          
-         CLK <= '0';
-         wait for clock_period/4;
+         if initialized = false then
+            for i in 0 to 3*divider/4 loop
+               CLK <= '1';
+               wait for half_clock_period;
+               CLK <= '0';
+               wait for half_clock_period;
+            end loop;
+            initialized := true;
+         end if;
+         
          data_in(2 downto 0) <= inLine(7 downto 5);
          s0 <= inLine(4);
          s1 <= inLine(3);
@@ -85,10 +97,16 @@ BEGIN
          invOE <= inLine(1);
          invCLR <= inLine(0);
          check_response := outLine(6);
-         wait for clock_period/4;
-         CLK <= '1';
-			wait for clock_period/4;
-         
+
+         for i in 0 to divider/2-1 loop
+            counter <= i;
+            CLK <= '1';
+            wait for half_clock_period;
+            CLK <= '0';
+            wait for half_clock_period;
+         end loop;
+
+
          write(outputBuf, string'("In = "));
          write(outputBuf, std_logic_vector'(inLine));
          
@@ -115,7 +133,14 @@ BEGIN
                severity failure;
          end if;
 
-         wait for clock_period/4;
+         for i in divider/2 to divider-1 loop
+            counter <= i;
+            CLK <= '1';
+            wait for half_clock_period;
+            CLK <= '0';
+            wait for half_clock_period;
+         end loop;
+
 		end loop;
       wait;
    end process;

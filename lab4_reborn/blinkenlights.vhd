@@ -28,7 +28,6 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --use UNISIM.VComponents.all;
 
 entity blinkenlights is 
-   generic (divider_ratio: natural := 2);
    port (
       clk      : in  std_logic;
       s0, s1, sbit : in std_logic;
@@ -55,7 +54,7 @@ architecture Behavioral of blinkenlights is
    signal data : std_logic_vector (7 downto 0);
 begin
    divider_internal : frekvensdeler 
-      generic map (ratio => divider_ratio)
+      generic map (ratio => 100)
       port map (clk => clk,
                 output => clk_internal);
    

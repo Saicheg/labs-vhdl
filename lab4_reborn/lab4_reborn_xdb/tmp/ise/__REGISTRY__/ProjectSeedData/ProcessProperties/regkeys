@@ -1091,7 +1091,7 @@ prop_264_name
 PROP_ModelSimSimRunTime_tb
 s
 prop_264_val
-"12us"
+"1200us"
 s
 prop_265_name
 PROP_ModelSimUutInstName_postMap

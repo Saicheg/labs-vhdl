@@ -1110,7 +1110,7 @@ proc restore { { project_dir "" } } {
       "B" "" "" "" "PROP_ModelSimProcWin" "false" 
       "B" "" "" "" "PROP_ModelSimSignalWin" "true" 
       "B" "" "" "" "PROP_ModelSimSimRes" "Default (1 ps)" 
-      "B" "" "" "" "PROP_ModelSimSimRunTime_tb" "12us" 
+      "B" "" "" "" "PROP_ModelSimSimRunTime_tb" "1200us" 
       "B" "" "" "" "PROP_ModelSimSimRunTime_tbw" "1000ns" 
       "B" "" "" "" "PROP_ModelSimSourceWin" "false" 
       "B" "" "" "" "PROP_ModelSimStructWin" "true" 
