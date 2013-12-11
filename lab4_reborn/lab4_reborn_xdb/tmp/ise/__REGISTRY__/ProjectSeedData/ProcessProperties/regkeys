@@ -62,10 +62,10 @@ prop_109_val
 "true"
 s
 prop_10_name
-PROP_PostFitSimTop
+PROP_PostSynthSimTop
 s
 prop_10_val
-""
+"Architecture|blinkenlights_spec|behavior"
 s
 prop_110_name
 PROP_CompxlibCPLDDetLib
@@ -74,10 +74,10 @@ prop_110_val
 "true"
 s
 prop_111_name
-PROP_UseDataGate
+PROP_xilxBitgCfg_GenOpt_IEEE1532File_xbr
 s
 prop_111_val
-"true"
+"false"
 s
 prop_112_name
 PROP_xcpldFitTemplate_xpla3
@@ -116,10 +116,10 @@ prop_117_val
 "LVCMOS18"
 s
 prop_118_name
-PROP_xilxBitgCfg_GenOpt_IEEE1532File_xbr
+PROP_UseDataGate
 s
 prop_118_val
-"false"
+"true"
 s
 prop_119_name
 PROP_mapIgnoreTimingConstraints
@@ -128,10 +128,10 @@ prop_119_val
 "false"
 s
 prop_11_name
-PROP_PostSynthSimTop
+PROP_UseSmartGuide
 s
 prop_11_val
-"Architecture|blinkenlights_spec|behavior"
+"false"
 s
 prop_120_name
 PROP_ngdbuildUseLOCConstraints
@@ -194,10 +194,10 @@ prop_129_val
 "false"
 s
 prop_12_name
-PROP_UseSmartGuide
+PROP_PartitionCreateDelete
 s
 prop_12_val
-"false"
+""
 s
 prop_130_name
 PROP_mapUseRLOCConstraints
@@ -260,7 +260,7 @@ prop_139_val
 "1"
 s
 prop_13_name
-PROP_PartitionCreateDelete
+PROP_PartitionForceSynth
 s
 prop_13_val
 ""
@@ -326,7 +326,7 @@ prop_149_val
 "true"
 s
 prop_14_name
-PROP_PartitionForceSynth
+PROP_PartitionForceTranslate
 s
 prop_14_val
 ""
@@ -392,7 +392,7 @@ prop_159_val
 "Pull Up"
 s
 prop_15_name
-PROP_PartitionForceTranslate
+PROP_PartitionForcePlacement
 s
 prop_15_val
 ""
@@ -458,10 +458,10 @@ prop_169_val
 "Pull Down"
 s
 prop_16_name
-PROP_PartitionForcePlacement
+PROP_DesignName
 s
 prop_16_val
-""
+"lab4_reborn"
 s
 prop_170_name
 PROP_xilxBitgCfg_Code
@@ -524,10 +524,10 @@ prop_179_val
 "Enable Readback and Reconfiguration"
 s
 prop_17_name
-PROP_DesignName
+PROP_Dummy
 s
 prop_17_val
-"lab4_reborn"
+"dum1"
 s
 prop_180_name
 PROP_xilxBitgCfg_GenOpt_ReadBack
@@ -590,10 +590,10 @@ prop_189_val
 "3"
 s
 prop_18_name
-PROP_Dummy
+PROP_LastAppliedGoal
 s
 prop_18_val
-"dum1"
+"Balanced"
 s
 prop_190_name
 PROP_xilxPostTrceAdvAna
@@ -656,10 +656,10 @@ prop_199_val
 ""
 s
 prop_19_name
-PROP_LastAppliedGoal
+PROP_LastAppliedStrategy
 s
 prop_19_val
-"Balanced"
+"Xilinx Default (unlocked)"
 s
 prop_1_name
 PROP_SteCreatedBy
@@ -728,10 +728,10 @@ prop_209_val
 "100"
 s
 prop_20_name
-PROP_LastAppliedStrategy
+PROP_LastUnlockStatus
 s
 prop_20_val
-"Xilinx Default (unlocked)"
+"false"
 s
 prop_210_name
 PROP_xstAsynToSync
@@ -794,10 +794,10 @@ prop_219_val
 "true"
 s
 prop_21_name
-PROP_LastUnlockStatus
+PROP_UserBrowsedStrategyFiles
 s
 prop_21_val
-"false"
+""
 s
 prop_220_name
 PROP_SynthEncoderExtract
@@ -860,10 +860,10 @@ prop_229_val
 "Yes"
 s
 prop_22_name
-PROP_UserBrowsedStrategyFiles
+PROP_SimUseCustom_postXlate
 s
 prop_22_val
-""
+"false"
 s
 prop_230_name
 PROP_xstUseSyncSet
@@ -983,7 +983,7 @@ prop_248_name
 PROP_Simulator
 s
 prop_248_val
-"Modelsim-PE Mixed"
+"Modelsim-SE VHDL"
 s
 prop_249_name
 PROP_SmartGuideFileName
@@ -1328,10 +1328,10 @@ prop_29_val
 "$XILINX/<language>/<simulator>"
 s
 prop_2_name
-PROP_SimUseCustom_postXlate
+PROP_Parse_Target
 s
 prop_2_val
-"false"
+"synthesis"
 s
 prop_300_name
 PROP_xilxBitgReadBk_GenBitStr
@@ -1415,13 +1415,13 @@ prop_312_name
 PROP_CompxlibSimPath
 s
 prop_312_val
-"D:/work/soft/Modeltech_pe_edu_10.2c/win32pe_edu"
+"C:/modeltech_6.5b/win32"
 s
 prop_313_name
 PROP_CompxlibLang
 s
 prop_313_val
-"All"
+"VHDL"
 s
 prop_314_name
 PROP_SimModelGenMultiHierFile
@@ -1766,10 +1766,10 @@ prop_39_val
 "true"
 s
 prop_3_name
-PROP_Parse_Target
+PROP_Top_Level_Module_Type
 s
 prop_3_val
-"synthesis"
+"HDL"
 s
 prop_40_name
 PROP_xstLibSearchOrder
@@ -1832,10 +1832,10 @@ prop_49_val
 ""
 s
 prop_4_name
-PROP_Top_Level_Module_Type
+PROP_SynthTop
 s
 prop_4_val
-"HDL"
+"Architecture|blinkenlights|Behavioral"
 s
 prop_50_name
 PROP_xstGenerateRTLNetlist
@@ -1898,10 +1898,10 @@ prop_59_val
 "LUT"
 s
 prop_5_name
-PROP_SynthTop
+PROP_BehavioralSimTop
 s
 prop_5_val
-"Architecture|blinkenlights|Behavioral"
+"Architecture|blinkenlights_spec|behavior"
 s
 prop_60_name
 PROP_xilxSynthMaxFanout
@@ -1925,7 +1925,7 @@ prop_63_name
 PROP_ImpactProjectFile
 s
 prop_63_val
-"Default"
+"C:/Users/Administrator/Desktop/lab4_reborn/lab4_reborn.ipf"
 s
 prop_64_name
 PROP_ngdbuild_otherCmdLineOptions
@@ -1964,7 +1964,7 @@ prop_69_val
 "As Optimized"
 s
 prop_6_name
-PROP_BehavioralSimTop
+PROP_PostXlateSimTop
 s
 prop_6_val
 "Architecture|blinkenlights_spec|behavior"
@@ -2030,7 +2030,7 @@ prop_79_val
 ""
 s
 prop_7_name
-PROP_PostXlateSimTop
+PROP_PostMapSimTop
 s
 prop_7_val
 "Architecture|blinkenlights_spec|behavior"
@@ -2096,7 +2096,7 @@ prop_89_val
 "Low"
 s
 prop_8_name
-PROP_PostMapSimTop
+PROP_PostParSimTop
 s
 prop_8_val
 "Architecture|blinkenlights_spec|behavior"
@@ -2162,8 +2162,8 @@ prop_99_val
 "true"
 s
 prop_9_name
-PROP_PostParSimTop
+PROP_PostFitSimTop
 s
 prop_9_val
-"Architecture|blinkenlights_spec|behavior"
+""
 s

@@ -1,0 +1,6 @@
+vhdl work "jkff.vhd"
+vhdl work "dff.vhd"
+vhdl work "shiftreg_channel.vhd"
+vhdl work "shiftreg.vhd"
+vhdl work "frekvensdeler.vhd"
+vhdl work "blinkenlights.vhd"

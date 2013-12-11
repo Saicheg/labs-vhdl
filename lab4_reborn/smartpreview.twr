@@ -5,11 +5,11 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
                                             |         |    Slack   | Achievable | Errors |    Score   
 ------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP   |         N/A|     5.645ns|     N/A|           1
-  _BUFGP                                    | HOLD    |     5.075ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP   |         N/A|     8.003ns|     N/A|         397
+  _BUFGP                                    | HOLD    |     2.949ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net div | SETUP   |         N/A|     8.437ns|     N/A|           0
-  ider_internal/count<0>                    | HOLD    |     1.791ns|            |       0|           0
+  Autotimespec constraint for clock net div | SETUP   |         N/A|     7.305ns|     N/A|           0
+  ider_internal/clock_signal                | HOLD    |     2.625ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
 
 

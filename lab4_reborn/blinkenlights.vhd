@@ -31,10 +31,10 @@ entity blinkenlights is
    port (
       clk      : in  std_logic;
       s0, s1, sbit : in std_logic;
-      invOE, invCLR : in std_logic;
-      data_in : in std_logic_vector(2 downto 0);
+      invCLR : in std_logic;
+      data_in : in std_logic_vector(3 downto 0);
       lights   : out std_logic_vector (5 downto 0));
-   
+	constant div : integer := 10000000;
 end blinkenlights;
 
 architecture Behavioral of blinkenlights is
@@ -54,7 +54,7 @@ architecture Behavioral of blinkenlights is
    signal data : std_logic_vector (7 downto 0);
 begin
    divider_internal : frekvensdeler 
-      generic map (ratio => 100)
+      generic map (ratio => div)
       port map (clk => clk,
                 output => clk_internal);
    
@@ -63,11 +63,11 @@ begin
          CLK => clk_internal,
          S0 => s0, S1 => s1,
          SR => sbit, SL => sbit,
-         invOE1 => invOE, invOE2 => invOE,
+         invOE1 => '0', invOE2 => '0',
          invCLR => invCLR,
          Q => data);
          
-   data <= "00000" & data_in when s0 = '1' and s1 = '1' else (others => 'Z');
-   lights <= data(7 downto 5) & data(2 downto 0) when invOE = '0' else (others => 'Z');
+   data <= "0000" & data_in when s0 = '1' and s1 = '1' else (others => 'Z');
+   lights <= data(5 downto 0);
 end Behavioral;
 

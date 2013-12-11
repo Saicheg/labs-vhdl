@@ -20,9 +20,8 @@ ARCHITECTURE behavior OF blinkenlights_spec IS
          s0 : IN  std_logic;
          s1 : IN  std_logic;
          sbit : IN  std_logic;
-         invOE : IN  std_logic;
          invCLR : IN  std_logic;
-         data_in : IN  std_logic_vector(2 downto 0);
+         data_in : IN  std_logic_vector(3 downto 0);
          lights : OUT  std_logic_vector(5 downto 0)
         );
     END COMPONENT;
@@ -33,16 +32,15 @@ ARCHITECTURE behavior OF blinkenlights_spec IS
    signal s0 : std_logic := '0';
    signal s1 : std_logic := '0';
    signal sbit : std_logic := '0';
-   signal invOE : std_logic := '1';
    signal invCLR : std_logic := '1';
-   signal data_in : std_logic_vector(2 downto 0) := (others => '0');
+   signal data_in : std_logic_vector(3 downto 0) := (others => '0');
 
  	--Outputs
    signal lights : std_logic_vector(5 downto 0);
 
    -- Clock period definitions
    constant half_clock_period : time := 10ns;
-   constant divider : integer := 100;
+   constant divider : integer := 10000000;
    
    signal counter : integer;
  
@@ -55,7 +53,6 @@ BEGIN
           s0 => s0,
           s1 => s1,
           sbit => sbit,
-          invOE => invOE,
           invCLR => invCLR,
           data_in => data_in,
           lights => lights
@@ -90,11 +87,10 @@ BEGIN
             initialized := true;
          end if;
          
-         data_in(2 downto 0) <= inLine(7 downto 5);
-         s0 <= inLine(4);
-         s1 <= inLine(3);
-         sbit <= inLine(2);
-         invOE <= inLine(1);
+         data_in(3 downto 0) <= inLine(7 downto 4);
+         s0 <= inLine(3);
+         s1 <= inLine(2);
+         sbit <= inLine(1);
          invCLR <= inLine(0);
          check_response := outLine(6);
 

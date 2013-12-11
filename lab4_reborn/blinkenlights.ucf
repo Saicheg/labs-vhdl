@@ -1,15 +1,16 @@
+.
 NET clk  LOC = r8  ; 
 NET data_in(0)  LOC = t10  ;
 NET data_in(1)  LOC = t9  ;
 NET data_in(2)  LOC = t8  ;
-NET invCLR  LOC = t7  ;
-NET invOE  LOC = t6  ;
+NET data_in(3)  LOC = t7  ;
+NET invCLR  LOC = b13  ;
 NET lights(0)  LOC = n6  ; 
 NET lights(1)  LOC = p5  ; 
 NET lights(2)  LOC = j15  ; 
 NET lights(3)  LOC = h16  ; 
 NET lights(4)  LOC = c15  ; 
 NET lights(5)  LOC = e15  ; 
-NET s0  LOC = c13  ;
-NET s1  LOC = b13  ;
-NET sbit  LOC = t5  ;
+NET s0  LOC = t6  ;
+NET s1  LOC = t5  ;
+NET sbit  LOC = c13  ;
